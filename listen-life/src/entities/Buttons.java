@@ -1,26 +1,29 @@
 package entities;
 
-public class Buttons {
+public abstract class Buttons {
 	private int sizeX;
 	private int sizeY;
 	public int positionX;
 	public int positionY;
-	private String buttonName;
 	
-	public Buttons(String buttonName) {
-		this.buttonName = buttonName;
-		sizeX = 40;
-		sizeY = sizeX;
+	
+	//SPECIFICS CLASS METHODS
+	public abstract void actionButton();         
+	
+	public void callAction(Buttons b) {                        //this call for each son classes the action button
+		b.actionButton();
 	}
 	
-	public Buttons(String buttonName, int positionX,int positionY) {
-		this.buttonName = buttonName;
+	//CONSTRUCTOR
+	public Buttons(int positionX,int positionY) {
 		sizeX = 40;
 		sizeY = sizeX;
 		this.positionX = positionX;
 		this.positionY = positionY;
 	}
 	
+	
+	//GETTERS AND SETTERS
 	public void setSizeX(int sizeX) {
 		this.sizeX = sizeX;
 	}
@@ -35,22 +38,6 @@ public class Buttons {
 	
 	public int getSizeY() {
 		return sizeY;
-	}
-
-	public String getButtonName() {
-		return buttonName;
-	}
-
-	public void setButtonName(String buttonName) {
-		this.buttonName = buttonName;
-	}
-	
-	public int buttonPressed() {
-		return 1;
-	}
-	
-	public int buttonReleased() {
-		return 0;
 	}
 
 }
