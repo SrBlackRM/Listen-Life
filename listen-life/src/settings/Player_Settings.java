@@ -1,15 +1,21 @@
 package settings;
 
+import java.awt.Frame;
+
 public class Player_Settings {
 	
 	private int sizeOfInterfaceX;
 	private int sizeOfInterfaceY;
 	public double volume;
+	public Frame janela = new Frame("Listen-Life");
 	
 	public Player_Settings() {
 		sizeOfInterfaceX = 800;
 		sizeOfInterfaceY = 600;
 		volume = 50;
+		
+		janela.setSize(sizeOfInterfaceY, sizeOfInterfaceX);
+		janela.setVisible(true);
 	}
 	
 	public int getSizeOfInterfaceY() {

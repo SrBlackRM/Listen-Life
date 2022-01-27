@@ -1,10 +1,14 @@
 package entities;
 
+import java.awt.Button;
+import java.awt.Component;
+
 public abstract class Buttons {
 	private int sizeX;
 	private int sizeY;
-	public int positionX;
-	public int positionY;
+	private int positionX;
+	private int positionY;
+	public Component bt = new Button();
 	
 	
 	//SPECIFICS CLASS METHODS
@@ -16,29 +20,43 @@ public abstract class Buttons {
 	
 	//CONSTRUCTOR
 	public Buttons(int positionX,int positionY) {
-		sizeX = 40;
-		sizeY = sizeX;
 		this.positionX = positionX;
 		this.positionY = positionY;
+		bt.setSize(40, 40);
+		bt.setLocation(positionX, positionY);
 	}
-	
 	
 	//GETTERS AND SETTERS
-	public void setSizeX(int sizeX) {
-		this.sizeX = sizeX;
+	public int getPositionX() {
+		return positionX;
 	}
-	
-	public void setSizeY(int sizeY) {
-		this.sizeY = sizeY;
+
+	public void setPositionX(int positionX) {
+		this.positionX = positionX;
 	}
-	
+
+	public int getPositionY() {
+		return positionY;
+	}
+
+	public void setPositionY(int positionY) {
+		this.positionY = positionY;
+	}
+
 	public int getSizeX() {
 		return sizeX;
 	}
-	
+
+	public void setSizeX(int sizeX) {
+		this.sizeX = sizeX;
+	}
+
 	public int getSizeY() {
 		return sizeY;
 	}
 
+	public void setSizeY(int sizeY) {
+		this.sizeY = sizeY;
+	}
 }
 

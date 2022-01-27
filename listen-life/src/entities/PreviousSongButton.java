@@ -6,9 +6,8 @@ public class PreviousSongButton extends Buttons{
 	public PreviousSongButton(int positionX, int positionY){
 		super(positionX, positionY);
 	}
+	
 
-	
-	
 	//CLASS METHODS
 	@Override
 	public void actionButton() {
